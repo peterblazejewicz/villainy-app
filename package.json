@@ -1,0 +1,28 @@
+{
+  "name": "villainy-app",
+  "version": "1.0.0",
+  "description": "Villainy App by @petebacondarwin (updated)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterblazejewicz/villainy-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterblazejewicz/villainy-app/issues"
+  },
+  "homepage": "https://github.com/peterblazejewicz/villainy-app#readme",
+  "devDependencies": {
+    "@angular/router": "^0.2.0",
+    "@types/angular": "^1.6.43",
+    "@types/angular-mocks": "^1.5.11",
+    "angular": "^1.6.9",
+    "angular-mocks": "^1.6.9",
+    "serve": "^6.5.1"
+  }
+}
