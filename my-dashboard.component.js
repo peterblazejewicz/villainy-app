@@ -1,4 +1,4 @@
-angular.module('myDashboard.component', ['myFavouriteVillains.component'])
+angular.module('myDashboard.component', ['favouriteVillains.component'])
 
 .component('myDashboard', {
   template:

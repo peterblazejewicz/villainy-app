@@ -1,40 +1,38 @@
-angular.module('myVillain.component', ['myTakeFocus.directive'])
+angular
+  .module('villain.component', ['myTakeFocus.directive'])
 
-.component('myVillain', {
-  template:
-    '<div class="my-villain">' +
-
+  .component('villain', {
+    template:
+      '<div class="my-villain">' +
       '<span class="full-name" ' +
-            'ng-if="!$ctrl.editing" ' +
-            'ng-click="$ctrl.editing=true">' +
-              '{{$ctrl.fullName}}' +
+      'ng-if="!$ctrl.editing" ' +
+      'ng-click="$ctrl.editing=true">' +
+      '{{$ctrl.fullName}}' +
       '</span>' +
-
       '<input class="full-name" type="text" ' +
-              'my-take-focus="$ctrl.editing" ' +
-              'ng-if="$ctrl.editing"' +
-              'ng-model="$ctrl.fullName" ' +
-              'ng-blur="$ctrl.nameChanged()" ' +
-              'ng-keyup="$ctrl.handleKey($event)">&nbsp;&nbsp;' +
-
+      'my-take-focus="$ctrl.editing" ' +
+      'ng-if="$ctrl.editing"' +
+      'ng-model="$ctrl.fullName" ' +
+      'ng-blur="$ctrl.nameChanged()" ' +
+      'ng-keyup="$ctrl.handleKey($event)">&nbsp;&nbsp;' +
       '<label>Like: ' +
-        '<input type="checkbox" ' +
-               'ng-model="$ctrl.isFavourite" ' +
-               'ng-click="$ctrl.onIsFavouriteChange()">' +
+      '<input type="checkbox" ' +
+      'ng-model="$ctrl.isFavourite" ' +
+      'ng-click="$ctrl.onIsFavouriteChange()">' +
       '</label>' +
-    '</div>',
-  bindings: {
-    villain: '<',
-    onVillainChange: '&',
-    isFavourite: '<',
-    onIsFavouriteChange: '&'
-  },
-  controller: MyVillain
-});
+      '</div>',
+    bindings: {
+      villain: '<',
+      onVillainChange: '&',
+      isFavourite: '<',
+      onIsFavouriteChange: '&',
+    },
+    controller: Villain,
+  });
 
-function MyVillain() {}
+function Villain() {}
 
-MyVillain.prototype = {
+Villain.prototype = {
   $onChanges: function(changes) {
     if (changes.villain) {
       this.fullName = getFullName(changes.villain.currentValue);
@@ -42,10 +40,10 @@ MyVillain.prototype = {
   },
   nameChanged: function() {
     this.editing = false;
-    this.onVillainChange({$event: splitName(this.fullName)});
+    this.onVillainChange({ $event: splitName(this.fullName) });
   },
   handleKey: function($event) {
-    switch($event.keyCode) {
+    switch ($event.keyCode) {
       case 27: // ESC
         this.fullName = getFullName(this.villain);
         this.editing = false;
@@ -56,7 +54,7 @@ MyVillain.prototype = {
         $event.preventDefault();
         break;
     }
-  }
+  },
 };
 
 function splitName(name) {

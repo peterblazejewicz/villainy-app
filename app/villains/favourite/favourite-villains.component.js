@@ -1,6 +1,6 @@
-angular.module('myFavouriteVillains.component', ['villains.service'])
+angular.module('favouriteVillains.component', ['villains.service'])
 
-.component('myFavouriteVillains', {
+.component('favouriteVillains', {
   template:
     '<div>' +
       '<h2>Favourites</h2>' +
@@ -10,10 +10,10 @@ angular.module('myFavouriteVillains.component', ['villains.service'])
         '</li>' +
       '</ul>' +
     '</div>',
-  controller: MyFavouriteVillains
+  controller: FavouriteVillains
 });
 
-function MyFavouriteVillains(villainsService) {
+function FavouriteVillains(villainsService) {
   this.$onInit = function() {
     var _this = this;
     villainsService.getVillains().then(function(villains) {
@@ -24,4 +24,4 @@ function MyFavouriteVillains(villainsService) {
     return villainsService.isFavourite(villain);
   };
 }
-MyFavouriteVillains.$inject = ['villainsService'];
+FavouriteVillains.$inject = ['villainsService'];

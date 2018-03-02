@@ -1,6 +1,6 @@
-angular.module('myVillains.component', ['villains.service', 'myFavouriteVillains.component'])
+angular.module('villains.component', ['villains.service', 'favouriteVillains.component'])
 
-.component('myVillains', {
+.component('villains', {
   template:
     '<div class="my-villains">' +
       '<div class="edit-list">' +
@@ -17,15 +17,15 @@ angular.module('myVillains.component', ['villains.service', 'myFavouriteVillains
       '</div>' +
       '<my-favourite-villains></my-favourite-villains>' +
     '</div>',
-  controller: MyVillains
+  controller: Villains
 });
 
-function MyVillains(villainsService) {
+function Villains(villainsService) {
   this.villainsService = villainsService;
 }
-MyVillains.$inject = ['villainsService'];
+Villains.$inject = ['villainsService'];
 
-MyVillains.prototype = {
+Villains.prototype = {
   $onInit: function() {
     this.loadVillains();
   },

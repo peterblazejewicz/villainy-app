@@ -1,6 +1,6 @@
-angular.module('myVillain.component', ['myTakeFocus.directive'])
+angular.module('villain.component', ['myTakeFocus.directive'])
 
-.component('myVillain', {
+.component('villain', {
   template:
     '<div class="my-villain">' +
 
@@ -29,12 +29,12 @@ angular.module('myVillain.component', ['myTakeFocus.directive'])
     isFavourite: '<',
     onIsFavouriteChange: '&'
   },
-  controller: MyVillain
+  controller: Villain
 });
 
-function MyVillain() {}
+function Villain() {}
 
-MyVillain.prototype = {
+Villain.prototype = {
   $onChanges: function(changes) {
     if (changes.villain) {
       this.fullName = getFullName(changes.villain.currentValue);

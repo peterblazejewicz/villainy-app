@@ -1,4 +1,4 @@
-describe('myVillains component', function() {
+describe('villains component', function() {
 
   describe('$onInit()', function() {
     it('should load the villains', function() {
