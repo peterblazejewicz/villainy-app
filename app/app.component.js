@@ -2,7 +2,7 @@
   'use strict';
   angular.module('myApp.component').component('myApp', {
     $routeConfig: [
-      { path: '/', component: 'myDashboard', name: 'Dashboard' },
+      { path: '/', component: 'dashboard', name: 'Dashboard' },
       { path: '/villains', component: 'myVillains', name: 'EditVillains' },
     ],
     template:

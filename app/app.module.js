@@ -3,7 +3,7 @@
   angular
     .module('myApp.component', [
       'ngComponentRouter',
-      'myDashboard.component',
+      'dashboard.component',
       'myNavigationMenu.component',
       'villains',
     ])
