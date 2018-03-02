@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp.component">
+
+  <head>
+    <base href="/index.html">
+
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/@angular/router/angular1/angular_1_router.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/shared/my-take-focus.directive.js"></script>
+    <script src="app/my-navigation-menu.component.js"></script>
+    <script src="app/my-dashboard.component.js"></script>
+    <script src="app/villains/index.js"></script>
+    <script src="app/villains/villains.service.js"></script>
+    <script src="app/villains/my-villains.component.js"></script>
+    <script src="app/villains/my-villain.component.js"></script>
+    <script src="app/villains/my-favourite-villains.component.js"></script>
+  </head>
+
+  <body>
+    <ng-outlet></ng-outlet>
+  </body>
+
+</html>
