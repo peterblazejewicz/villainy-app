@@ -4,15 +4,16 @@
     .module('favouriteVillains.component', ['villains.service'])
 
     .component('favouriteVillains', {
-      template:
-        '<div>' +
-        '<h2>Favourites</h2>' +
-        '<ul class="favourites">' +
-        '<li ng-repeat="villain in $ctrl.villains | filter : $ctrl.isFavourite">' +
-        '{{ villain.firstName }} <strong>{{ villain.lastName }}</strong>' +
-        '</li>' +
-        '</ul>' +
+      template: [
+        '<div>',
+        ' <h2>Favourites</h2>',
+        ' <ul class="favourites">',
+        '   <li ng-repeat="villain in $ctrl.villains | filter : $ctrl.isFavourite">',
+        '     {{ villain.firstName }} <strong>{{ villain.lastName }}</strong>',
+        '   </li>',
+        ' </ul>',
         '</div>',
+      ].join(''),
       controller: FavouriteVillains,
     });
 

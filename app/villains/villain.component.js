@@ -4,25 +4,26 @@
     .module('villain.component', ['shared.module'])
 
     .component('villain', {
-      template:
-        '<div class="my-villain">' +
-        '<span class="full-name" ' +
-        'ng-if="!$ctrl.editing" ' +
-        'ng-click="$ctrl.editing=true">' +
-        '{{$ctrl.fullName}}' +
-        '</span>' +
-        '<input class="full-name" type="text" ' +
-        'my-take-focus="$ctrl.editing" ' +
-        'ng-if="$ctrl.editing"' +
-        'ng-model="$ctrl.fullName" ' +
-        'ng-blur="$ctrl.nameChanged()" ' +
-        'ng-keyup="$ctrl.handleKey($event)">&nbsp;&nbsp;' +
-        '<label>Like: ' +
-        '<input type="checkbox" ' +
-        'ng-model="$ctrl.isFavourite" ' +
-        'ng-click="$ctrl.onIsFavouriteChange()">' +
-        '</label>' +
+      template: [
+        '<div class="my-villain">',
+        ' <span class="full-name" ',
+        '   ng-if="!$ctrl.editing" ',
+        '   ng-click="$ctrl.editing=true">',
+        '     {{$ctrl.fullName}}',
+        ' </span>',
+        ' <input class="full-name" type="text" ',
+        '   my-take-focus="$ctrl.editing" ',
+        '   ng-if="$ctrl.editing"',
+        '   ng-model="$ctrl.fullName" ',
+        '   ng-blur="$ctrl.nameChanged()" ',
+        '   ng-keyup="$ctrl.handleKey($event)">&nbsp;&nbsp;',
+        ' <label>Like: ',
+        '   <input type="checkbox" ',
+        '     ng-model="$ctrl.isFavourite" ',
+        '     ng-click="$ctrl.onIsFavouriteChange()">',
+        ' </label>',
         '</div>',
+      ].join(''),
       bindings: {
         villain: '<',
         onVillainChange: '&',
