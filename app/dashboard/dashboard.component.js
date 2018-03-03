@@ -2,7 +2,7 @@
 (function(angular) {
   'use strict';
   angular
-    .module('dashboard.component', ['favouriteVillains.component'])
+    .module('dashboard.module')
 
     .component('dashboard', {
       template: [

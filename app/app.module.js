@@ -3,10 +3,10 @@
   'use strict';
   angular
     .module('myApp.component', [
-      'ngComponentRouter',
-      'dashboard.component',
+      'dashboard.module',
       'navigationMenu.component',
-      'villains',
+      'ngComponentRouter',
+      'villains.module',
     ])
     .run([
       '$rootRouter',
