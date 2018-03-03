@@ -7,7 +7,7 @@
       template: [
         '<div>',
         ' <p>Welcome to the villains app</p>',
-        ' <my-favourite-villains></my-favourite-villains>',
+        ' <favourite-villains></favourite-villains>',
         '</div>',
       ].join(''),
     });

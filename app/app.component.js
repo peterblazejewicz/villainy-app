@@ -3,7 +3,7 @@
   angular.module('myApp.component').component('myApp', {
     $routeConfig: [
       { path: '/', component: 'dashboard', name: 'Dashboard' },
-      { path: '/villains', component: 'myVillains', name: 'EditVillains' },
+      { path: '/villains', component: 'villains', name: 'EditVillains' },
     ],
     template:
       '<img src="assets/images/villain.svg" class="logo" title="by J.J. - http://www.jjmccullough.com/">' +

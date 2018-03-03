@@ -1,12 +1,11 @@
-describe('myVillain component', function() {
-
+describe('villain component', function() {
   describe('$onChanges(changes)', function() {
     it('should update the fullName property if the change is a villain change', function() {
       var $ctrl = getComponentController();
       $ctrl.$onChanges({
         villain: {
-          currentValue: { id: 2, firstName: 'Bat', lastName: 'Girl' }
-        }
+          currentValue: { id: 2, firstName: 'Bat', lastName: 'Girl' },
+        },
       });
       expect($ctrl.fullName).toEqual('Bat Girl');
     });
@@ -19,7 +18,7 @@ describe('myVillain component', function() {
       $ctrl.fullName = 'Wonder Woman';
       $ctrl.nameChanged();
       expect($ctrl.onVillainChange).toHaveBeenCalledWith({
-        $event: { firstName: 'Wonder', lastName: 'Woman' }
+        $event: { firstName: 'Wonder', lastName: 'Woman' },
       });
     });
   });
@@ -68,7 +67,9 @@ describe('myVillain component', function() {
   }
 
   function createKeyEvent(keyCode) {
-      return { keyCode: keyCode, preventDefault: jasmine.createSpy('preventDefault') };
+    return {
+      keyCode: keyCode,
+      preventDefault: jasmine.createSpy('preventDefault'),
+    };
   }
-
 });

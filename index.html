@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html ng-app="myApp.component">
 
-  <head>
-    <base href="/index.html">
+<head>
+  <title>Villain App</title>
+  <base href="/index.html">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/@angular/router/angular1/angular_1_router.js"></script>
+  <script src="app/app.module.js"></script>
+  <script src="app/app.config.js"></script>
+  <script src="app/app.component.js"></script>
+  <script src="app/shared/my-take-focus.directive.js"></script>
+  <script src="app/navigation/navigation-menu.component.js"></script>
+  <script src="app/dashboard/dashboard.component.js"></script>
+  <script src="app/villains/index.js"></script>
+  <script src="app/villains/villains.service.js"></script>
+  <script src="app/villains/villains.component.js"></script>
+  <script src="app/villains/villain.component.js"></script>
+  <script src="app/villains/favourite/favourite-villains.component.js"></script>
+</head>
 
-    <link rel="stylesheet" href="assets/css/app.css">
-
-    <script src="node_modules/angular/angular.js"></script>
-    <script src="node_modules/@angular/router/angular1/angular_1_router.js"></script>
-
-    <script src="app/app.module.js"></script>
-    <script src="app/app.config.js"></script>
-    <script src="app/app.component.js"></script>
-    <script src="app/shared/my-take-focus.directive.js"></script>
-    <script src="app/navigation/navigation-menu.component.js"></script>
-    <script src="app/dashboard/dashboard.component.js"></script>
-    <script src="app/villains/index.js"></script>
-    <script src="app/villains/villains.service.js"></script>
-    <script src="app/villains/my-villains.component.js"></script>
-    <script src="app/villains/my-villain.component.js"></script>
-    <script src="app/villains/favourite/favourite-villains.component.js"></script>
-  </head>
-
-  <body>
-    <ng-outlet></ng-outlet>
-  </body>
+<body>
+  <ng-outlet></ng-outlet>
+</body>
 
 </html>

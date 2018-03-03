@@ -1,5 +1,4 @@
 describe('villains component', function() {
-
   describe('$onInit()', function() {
     it('should load the villains', function() {
       var $ctrl = getComponentController();
@@ -16,7 +15,11 @@ describe('villains component', function() {
       inject(function($rootScope) {
         $ctrl.loadVillains();
         $rootScope.$apply();
-        expect($ctrl.villains[0]).toEqual({ id: 0, firstName: 'Poison', lastName: 'Ivy' });
+        expect($ctrl.villains[0]).toEqual({
+          id: 0,
+          firstName: 'Poison',
+          lastName: 'Ivy',
+        });
       });
     });
   });
@@ -26,8 +29,12 @@ describe('villains component', function() {
       var $ctrl = getComponentController();
       inject(function(villainsService) {
         spyOn(villainsService, 'save');
-        $ctrl.saveVillain({id: 2}, 'newFirstName', 'newLastName');
-        expect(villainsService.save).toHaveBeenCalledWith(2, 'newFirstName', 'newLastName');
+        $ctrl.saveVillain({ id: 2 }, 'newFirstName', 'newLastName');
+        expect(villainsService.save).toHaveBeenCalledWith(
+          2,
+          'newFirstName',
+          'newLastName',
+        );
       });
     });
   });
@@ -39,7 +46,9 @@ describe('villains component', function() {
         var someVillain = {};
         spyOn(villainsService, 'toggleFavourite');
         $ctrl.toggleFavourite(someVillain);
-        expect(villainsService.toggleFavourite).toHaveBeenCalledWith(someVillain);
+        expect(villainsService.toggleFavourite).toHaveBeenCalledWith(
+          someVillain,
+        );
       });
     });
   });
