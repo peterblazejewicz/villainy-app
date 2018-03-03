@@ -1,3 +1,4 @@
+// ts-check
 (function(angular) {
   angular
     .module('villain.component', ['myTakeFocus.directive'])

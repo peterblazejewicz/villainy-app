@@ -1,3 +1,4 @@
+// ts-check
 (function(angualr) {
   angular.module('villains', [
     'villains.service',

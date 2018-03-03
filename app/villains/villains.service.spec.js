@@ -1,3 +1,5 @@
+// ts-check
+
 describe('villains.service', function() {
   describe('getVillains()', function() {
     it('should return a promise to an array of villain objects', function() {

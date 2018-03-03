@@ -1,3 +1,4 @@
+// ts-check
 describe('myTakeFocus directive', function() {
   it("should call focus on the directive's element, when the given expression becomes true", function() {
     module('myTakeFocus.directive');

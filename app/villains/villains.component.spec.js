@@ -1,3 +1,4 @@
+// ts-check
 describe('villains component', function() {
   describe('$onInit()', function() {
     it('should load the villains', function() {

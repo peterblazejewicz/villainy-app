@@ -1,3 +1,4 @@
+// ts-check
 describe('villain component', function() {
   describe('$onChanges(changes)', function() {
     it('should update the fullName property if the change is a villain change', function() {

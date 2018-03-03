@@ -1,3 +1,4 @@
+// ts-check
 (function(angular) {
   angular
     .module('navigationMenu.component', ['ngComponentRouter'])

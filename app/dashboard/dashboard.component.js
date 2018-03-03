@@ -1,3 +1,4 @@
+// ts-check
 (function(angular) {
   'use strict';
   angular
