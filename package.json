@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "serve . -s",
-    "test": "karma start"
+    "test": "karma start",
+    "update-webdriver": "webdriver-manager update",
+    "pree2e": "npm run update-webdriver",
+    "e2e": "protractor e2e-tests/protractor.conf.js"
   },
   "repository": {
     "type": "git",

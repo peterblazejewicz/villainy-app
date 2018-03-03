@@ -1,12 +1,11 @@
 //jshint strict: false
 exports.config = {
-
   allScriptsTimeout: 11000,
 
-  baseUrl: 'http://localhost:3000/',
+  baseUrl: 'http://localhost:5000/',
 
   capabilities: {
-    'browserName': 'chrome'
+    browserName: 'chrome',
   },
 
   directConnect: true,
@@ -14,11 +13,8 @@ exports.config = {
   framework: 'jasmine',
 
   jasmineNodeOpts: {
-    defaultTimeoutInterval: 30000
+    defaultTimeoutInterval: 30000,
   },
 
-  specs: [
-    '*.js'
-  ]
-
+  specs: ['*.js'],
 };
