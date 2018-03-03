@@ -21,8 +21,16 @@
     "@angular/router": "^0.2.0",
     "@types/angular": "^1.6.43",
     "@types/angular-mocks": "^1.5.11",
+    "@types/jasmine": "^2.8.6",
+    "@types/karma": "^1.7.3",
+    "@types/karma-jasmine": "0.0.29",
     "angular": "^1.6.9",
     "angular-mocks": "^1.6.9",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "protractor": "^5.3.0",
     "serve": "^6.5.1"
   }
 }
