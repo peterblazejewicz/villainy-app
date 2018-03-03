@@ -4,7 +4,7 @@
   angular
     .module('myApp.component', [
       'dashboard.module',
-      'navigationMenu.component',
+      'navigation.module',
       'ngComponentRouter',
       'villains.module',
     ])
