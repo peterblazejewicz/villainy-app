@@ -4,7 +4,8 @@
   "description": "Villainy App by @petebacondarwin (updated)",
   "main": "index.js",
   "scripts": {
-    "start": "serve . -s"
+    "start": "serve . -s",
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
