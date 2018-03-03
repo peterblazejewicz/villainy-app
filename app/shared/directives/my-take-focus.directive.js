@@ -1,7 +1,8 @@
 // ts-check
 (function(angular) {
+  'use strict';
   angular
-    .module('myTakeFocus.directive', [])
+    .module('shared.module')
 
     .directive('myTakeFocus', function() {
       return function link(scope, element, attr) {
