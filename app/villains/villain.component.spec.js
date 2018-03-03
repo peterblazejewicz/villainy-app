@@ -60,9 +60,9 @@ describe('villain component', function() {
 
   function getComponentController() {
     var $ctrl;
-    module('myVillain.component');
+    module('villains.module');
     inject(function($componentController) {
-      $ctrl = $componentController('myVillain');
+      $ctrl = $componentController('villain');
     });
     return $ctrl;
   }

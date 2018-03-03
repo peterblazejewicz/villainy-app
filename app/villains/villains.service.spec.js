@@ -61,7 +61,7 @@ describe('villains.service', function() {
 
 function getVillains() {
   var villains;
-  module('villains.service');
+  module('villains.module');
   inject(function(villainsService, $rootScope) {
     villainsService.getVillains().then(function(val) {
       villains = val;
